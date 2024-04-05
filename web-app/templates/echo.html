@@ -7,9 +7,9 @@
     <title>ECHO</title>
 </head>
 <body>
-    <form>
-        <input name
+    <form hx-post="/enviar_msg" hx-target="#repetidor">
+        <input name="msg" type="text" placeholder="Digite aqui a mensagem para ser repetida">
     </form>
-    
+    <div id="repetidor"></div>
 </body>
 </html>
