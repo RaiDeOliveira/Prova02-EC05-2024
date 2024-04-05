@@ -16,14 +16,20 @@ def ping():
 
 @app.route('/pong')
 def pong():
+    hora = str(datetime.now())
+    db.insert({"hora": hora, "tipo_de_requisicao": request.method})
     return f'<p>{resposta_pong}</p>'
 
 @app.route('/echo', methods=['GET', 'POST'])
 def echo():
+    hora = str(datetime.now())
+    db.insert({"hora": hora, "tipo_de_requisicao": request.method})
     return render_template('echo.html')
 
 @app.route('/enviar_msg', methods=['POST'])
 def enviar_msg():
+    hora = str(datetime.now())
+    db.insert({"hora": hora, "tipo_de_requisicao": request.method})
     return request.form.get('msg')
 
 if __name__ == "__main__":
