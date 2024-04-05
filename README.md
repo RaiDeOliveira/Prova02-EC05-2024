@@ -32,4 +32,4 @@ A aplicação possui várias rotas, das quais as principais são:
 
 - **/ping**: retorna uma mensagem de "pong" em formato json
 - **/echo**: permite que o usuário digite uma mensagem e à retorna na tela em formato json
-- **/das**: exibe um dashboard com logs das datas, horários e tipos de cada requisição feita através da aplicação web
+- **/dash**: exibe um dashboard simples com logs das datas, horários e tipos de cada requisição feita através da aplicação web
