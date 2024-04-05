@@ -1,0 +1,10 @@
+<tr>
+    <th>Data e hora</th>
+    <th>Tipo de requisição</th>
+</tr>
+{%for log in log_db%}
+<tr>
+    <td>{{log['hora']}}</td>
+    <td>{{log['tipo_de_requisicao']}}</td>
+</tr>
+{%endfor%}

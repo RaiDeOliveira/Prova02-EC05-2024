@@ -9,7 +9,6 @@ resposta_pong = '{"resposta": "pong"}'
 
 @app.route('/ping')
 def ping():
-
     hora = str(datetime.now())
     db.insert({"hora": hora, "tipo_de_requisicao": request.method})
     return render_template('ping.html')
@@ -31,6 +30,15 @@ def enviar_msg():
     hora = str(datetime.now())
     db.insert({"hora": hora, "tipo_de_requisicao": request.method})
     return request.form.get('msg')
+
+@app.route('/dash')
+def dash():
+    return render_template("dash.html")
+
+@app.route('/info')
+def info():
+    return render_template("info.html", db=db)
+
 
 if __name__ == "__main__":
     app.run(port=8000, host='0.0.0.0')
