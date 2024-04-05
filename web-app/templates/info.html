@@ -1,10 +1,14 @@
-<tr>
-    <th>Data e hora</th>
-    <th>Tipo de requisição</th>
-</tr>
-{%for log in log_db%}
-<tr>
-    <td>{{log['hora']}}</td>
-    <td>{{log['tipo_de_requisicao']}}</td>
-</tr>
-{%endfor%}
+<table style="border: 1px solid; border-radius: 10px; padding: 10px; font-size: large; margin-left: auto; margin-right: auto; align-items: center; align-content: center;">
+
+    <tr>
+        <th>Data e hora</th>
+        <th>Tipo de requisição</th>
+    </tr>
+    {%for log in db%}
+    <tr>
+        <td>{{log['hora']}}</td>
+        <td>{{log['tipo_de_requisicao']}}</td>
+    </tr>
+    {%endfor%}
+
+</table>
